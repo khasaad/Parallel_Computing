@@ -1,0 +1,28 @@
+Readme Pour le projet de CHP
+
+Un makefile est présent pour compiler le programme.
+Le fichier data.txt permet de choisir différents
+paramètres pour lancer le programme
+
+Le script run est présent pour lancer plus facilement
+le programme sur plusieurs processeurs
+
+Par exemple: "./run 10"
+
+Lance le programme sur 1 processeur puis sur 2 processeurs
+... puis sur 10 processuers. Le fichier "temps" est crée
+au passage dans lequel la première colonne correspond au
+nombre de processeur, la deuxiemme colonne correspond au
+Speedup et la troisième colonne correspond à l'Efficacité.
+
+Il faut noter que la commande qui lance mpirun est différente à
+l'ENSEIRB il faut donc commenter et decomenter une ligne dans le
+fichier run
+
+Le fichier proc contient le temps mis lorsque le
+programme est lancé sur un seul processeur.
+
+Pour tracer le SpeedUp et l'Efficacité, on rentre la
+commande suivante dans le terminal Gnuplot,
+
+plot "temps" using 1:2 with lines title "SpeedUp","temps" using 1:3 with lines "Efficacite"

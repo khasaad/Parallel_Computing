@@ -1,0 +1,11 @@
+3	    !Choix second membre et conditions aux bords (Voir ci dessous)
+50 50	    !Nx, Ny
+1.0 1.0 1.0 !Lx, Ly, D
+0.96d0	    !Tmax
+0.9d0	    !CFL
+1.d-9 20 10  !espilon, Nl, Ifreq
+
+!Choix du second membre et des conditions aux bords
+! 1 : f = 2(y - y*y + x - x*x) ; g = 0 ; h = 0
+! 2 : f = sin(x) + cos(y) ; g = h = sin(x) + cos(y)
+! 3 : f = exp(-(x-Lx/2)^2)*exp(-(y-Ly/2)^2)*cos(t*pi/2) ; g=0 ; h = 1
